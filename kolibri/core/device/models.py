@@ -165,3 +165,7 @@ class DeviceAppKey(models.Model):
             key = app_key.key
             cache.set(APP_KEY_CACHE_KEY, key, 5000)
         return key
+
+
+class DummyModel(models.Model):
+    id = models.AutoField(primary_key=True)
