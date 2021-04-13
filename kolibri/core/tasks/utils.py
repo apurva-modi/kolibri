@@ -5,6 +5,7 @@ import uuid
 
 from kolibri.core.tasks import compat
 from kolibri.core.utils.cache import ProcessLock
+from kolibri.core.utils.lock import DatabaseLock
 
 
 # An object on which to store data about the current job
@@ -121,3 +122,4 @@ class InfiniteLoopThread(compat.Thread):
 
 
 db_task_write_lock = ProcessLock("db_task_write_lock")
+db_task_write_lock_v2 = DatabaseLock()
